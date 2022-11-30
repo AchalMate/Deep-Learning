@@ -1,0 +1,47 @@
+<html>
+<head>
+   <title>CNN Model</title>
+
+   <style>
+     body {
+       background-color: pink ;
+      }
+      table,tr,td{
+      border: 1px solid;
+      width: 50%;
+  border-collapse: collapse;
+      }
+</style>
+</head>
+   <body><center>
+   <h1><font color="Red"> Image Classifier</font></h1>
+      <table>
+         <tr>
+            <th>
+               Mnist Handwritten Digit Recognizer Using CNN
+            </th>
+
+         </tr>
+         <tr>
+            <td>
+               <form action = "{{ url_for('upload_image_file') }}" method = "POST"
+                     enctype = "multipart/form-data">
+                  <input type = "file" name = "file_mnist" />
+                  <input type = "submit"/>
+               </form>
+            </td>
+
+
+         </tr>
+
+         <tr>
+            <td>
+               <h2> Result : {{ ans }} </h2>
+            </td>
+
+         </tr>
+      </table>
+
+      </center>
+   </body>
+</html>
